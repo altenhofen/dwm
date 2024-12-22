@@ -7,22 +7,23 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Iosevka Comfy Wide Motion Duo:size=10" };
 static const char dmenufont[]       = "Iosevka Comfy Wide Motion Duo:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#000000";
+static const char col_gray1[]       = "#f0f0f0";  // Light gray for background
+static const char col_gray2[]       = "#999999";  // Slightly darker gray for borders or inactive elements
+static const char col_gray3[]       = "#444444";  // Darker gray for text
+static const char col_gray4[]       = "#333333";  // Darker gray for more prominent text
+static const char col_cyan[]        = "#f0f0f0";  // Black or dark color for highlights or active text
+
 static const unsigned int baralpha = 0xc0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_gray2, col_cyan  },
 };
 static const unsigned int alphas[][3]      = {
     /*               fg      bg        border*/
     [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+    [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
